@@ -61,7 +61,7 @@ def unet(pretrained_weights = None,input_size = (150,150,1)):
 
     model = Model(inputs=input_m,outputs=conv10)
 
-    model.compile(optimizer = Adam(lr = 2e-6), loss = dice_loss , metrics = ['accuracy',DICE,Recall,Specificity,Precision])
+    model.compile(optimizer = Adam(lr = 5e-6), loss = dice_loss , metrics = ['accuracy',DICE,Recall,Specificity,Precision])
     
     #model.summary()
 
